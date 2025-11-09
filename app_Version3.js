@@ -92,7 +92,7 @@ const serverList = [
     name: "iperf",
     ip: "192.168.60.145",
     user: "client1",
-    type: "shewebll",
+    type: "shell",
     status: "up"
   },
   {
