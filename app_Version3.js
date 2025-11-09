@@ -150,10 +150,10 @@ function renderServers(list) {
     statusBox.className = "status-box";
     const statusDot = document.createElement('span');
     statusDot.className = "status-dot " + (server.status === "up" ? "up" : "down");
-    statusDot.title = server.status === "up" ? "آنلاین" : "آفلاین";
+    statusDot.title = server.status === "up" ? "Online" : "Offline";
     const statusText = document.createElement('span');
     statusText.className = "status-text";
-    statusText.textContent = server.status === "up" ? "آنلاین" : "آفلاین";
+    statusText.textContent = server.status === "up" ? "Online" : "Offline";
     statusBox.appendChild(statusDot);
     statusBox.appendChild(statusText);
 
