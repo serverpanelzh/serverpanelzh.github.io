@@ -119,7 +119,7 @@ function renderServers(list) {
   container.innerHTML = "";
 
   if (list.length === 0) {
-    container.innerHTML = `<div class="no-server">سروری با این جستجو یافت نشد.</div>`;
+    container.innerHTML = `<div class="no-server">Server not found.</div>`;
     return;
   }
 
@@ -143,7 +143,7 @@ function renderServers(list) {
     if (server.user) {
       userEl = document.createElement('div');
       userEl.className = "server-user";
-      userEl.textContent = "کاربر: " + server.user;
+      userEl.textContent = "User: " + server.user;
     }
 
     const statusBox = document.createElement('div');
@@ -159,7 +159,7 @@ function renderServers(list) {
 
     const connectBtn = document.createElement('button');
     connectBtn.className = 'connect-btn';
-    connectBtn.textContent = "اتصال سریع";
+    connectBtn.textContent = "Connection";
     connectBtn.onclick = () => connectToServer(server);
 
     card.appendChild(logo);
@@ -181,7 +181,7 @@ function connectToServer(server) {
     let url = `ssh://${server.user}@${server.ip}`;
     window.open(url);
   } else {
-    alert("نوع سرور ناشناخته است!");
+    alert("Unknown server type!");
   }
 }
 
