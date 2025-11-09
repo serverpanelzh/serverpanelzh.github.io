@@ -77,7 +77,7 @@ const serverList = [
     ip: "192.168.60.3",
     user: "",
     type: "shell",
-    status: "down"
+    status: "up"
   },
   {
     id: 11, 
