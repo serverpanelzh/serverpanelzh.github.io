@@ -64,15 +64,7 @@ const serverList = [
     status: "up"
   },
   {
-    id: 9,
-    name: "PRTG-Server-2016",
-    ip: "Unkown",
-    user: "",
-    type: "web",
-    status: "down"
-  },
-  {
-    id: 10, 
+    id: 9, 
     name: "server-gns3",
     ip: "192.168.60.3",
     user: "",
@@ -80,7 +72,7 @@ const serverList = [
     status: "up"
   },
   {
-    id: 11, 
+    id: 10, 
     name: "ESXI 6.5",
     ip: "192.168.30.22",
     user: "root",
@@ -88,7 +80,7 @@ const serverList = [
     status: "up"
   },
   {
-    id: 12, 
+    id: 11, 
     name: "iperf",
     ip: "192.168.60.145",
     user: "client1",
@@ -96,7 +88,7 @@ const serverList = [
     status: "up"
   },
   {
-    id: 13, 
+    id: 12, 
     name: "laptop",
     ip: "192.168.101.32",
     user: "laptop2",
