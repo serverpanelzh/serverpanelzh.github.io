@@ -1,0 +1,203 @@
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #f3f6fd 25%, #e9ecff 100%);
+  min-height: 100vh;
+  margin: 0;
+  color: #222;
+}
+header {
+  background: linear-gradient(90deg, #337dff 0%, #0053b8 90%);
+  color: #fff;
+  padding: 34px 0 24px 0;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  box-shadow: 0 6px 18px rgba(51,125,255,0.10);
+  margin-bottom: 8px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-icon {
+  display: inline-block;
+  margin-left: 10px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.header-sub {
+  text-align: center;
+  font-size: 1rem;
+  opacity: .82;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0 8px 0;
+}
+.search-box {
+  width: 96vw;
+  max-width: 360px;
+  padding: 13px 38px 13px 14px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, .11);
+  font-size: 1.06rem;
+  background: #eef2fa;
+  color: #0053b8;
+  transition: box-shadow 0.2s;
+}
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 3px 15px rgba(51, 125, 255, 0.19);
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px 30px 10px;
+}
+#server-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 17px;
+}
+.server-card {
+  background: linear-gradient(120deg, #fff 65%, #dce6ff 100%);
+  border-radius: 21px;
+  box-shadow: 0 4px 24px rgba(51,125,255,.08);
+  padding: 22px 19px 19px 19px;
+  display: flex;
+  flex-direction: column;
+  min-height: 145px;
+  position: relative;
+  border: 2px solid #e5eafd;
+  transition: box-shadow 0.24s, border-color 0.14s;
+}
+.server-card:hover {
+  border-color: #337dff;
+  box-shadow: 0 8px 28px rgba(0,123,255,0.13), 0 2px 6px #337dff33;
+}
+.server-logo {
+  display: inline-block;
+  position: absolute;
+  top: -19px;
+  right: -15px;
+  background: #337dff;
+  border-radius: 50%;
+  padding: 13px;
+  box-shadow: 0 2px 12px #337dff44;
+  border: 4px solid #fff;
+}
+.server-logo.web {
+  background: linear-gradient(135deg, #337dff 60%, #07cabf 100%);
+}
+.server-logo.shell {
+  background: linear-gradient(135deg, #337dff 70%, #17de4e 100%);
+}
+.server-name {
+  font-size: 1.18rem;
+  font-weight: bold;
+  color: #0053b8;
+  margin-bottom: 4px;
+  margin-top: 15px;
+  letter-spacing: .7px;
+}
+.server-ip {
+  color: #333;
+  font-size: 0.98rem;
+  direction: ltr;
+  opacity: .83;
+  margin-bottom: 0.5em;
+  margin-top: 4px;
+}
+.server-user {
+  color: #888;
+  font-size: 0.97rem;
+  margin-bottom: 2px;
+}
+.status-box {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.status-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  margin-left: 11px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px #337dff28;
+  display: inline-block;
+}
+.status-dot.up {
+  background: #25d67b;
+}
+.status-dot.down {
+  background: #ff5a3c;
+}
+.status-text {
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: #333;
+}
+.connect-btn {
+  background: linear-gradient(90deg,#337dff 60%, #07cabf 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 32px;
+  font-size: 1.09rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 14px;
+  align-self: flex-end;
+  box-shadow: 0 2px 6px #337dff22;
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.connect-btn:hover, .connect-btn:focus {
+  background: linear-gradient(90deg,#0053b8 80%, #17de4e 100%);
+  box-shadow: 0 3px 14px #337dff44;
+  outline: none;
+}
+.no-server {
+  background: #f6f9ff;
+  border-radius: 18px;
+  padding: 32px 10px;
+  text-align: center;
+  color: #aaa;
+  font-size: 1.12rem;
+  box-shadow: 0 2px 12px #337dff14;
+}
+@media (max-width:600px) {
+  header h1 {
+    font-size: 1.12rem;
+  }
+  main {
+    padding: 0 2vw;
+  }
+  #server-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .server-card {
+    min-height: 115px;
+    padding: 15px 7vw 15px 7vw;
+  }
+  .connect-btn {
+    padding: 9px 17vw;
+    font-size: 1rem;
+  }
+  .server-logo {
+    top: -13px;
+    right: -9px;
+    padding: 9px;
+  }
+}
