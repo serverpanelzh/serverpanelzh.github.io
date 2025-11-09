@@ -100,7 +100,7 @@ const serverList = [
     name: "laptop",
     ip: "192.168.101.32",
     user: "laptop2",
-    type: "shewebll",
+    type: "shell",
     status: "up"
   }
 ];
